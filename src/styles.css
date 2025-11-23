@@ -1,0 +1,348 @@
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* === PALETA === */
+:root {
+  --vino: #B71C1C;
+  --coral: #FF7043;
+  --gris-claro: #F5F5F5;
+  --gris-oscuro: #2E2E2E;
+  --blanco: #FFFFFF;
+  --radius: 8px; 
+  --shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--gris-claro);
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+}
+
+/* === BASE === */
+h1, h2, h3 {
+  color: var(--vino);
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* === BOTONES === */
+button {
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: var(--radius);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  opacity: 0.92;
+}
+
+/* === SECCIONES === */
+section {
+  padding: 90px 20px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 220px 20px 180px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3.6rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: var(--vino);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  max-width: 680px;
+  margin: 0 auto 30px;
+  color: var(--blanco);
+}
+
+/* ===== BOTÓN DESCARGAR ===== */
+.btn-download {
+  background-color: var(--coral);   
+  color: var(--blanco);
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: var(--vino);   
+  transform: scale(1.05);
+}
+
+/* === BENEFICIOS === */
+.benefits-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.benefit-card {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+}
+
+.benefit-card .icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  color: var(--vino);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+  color: var(--gris-oscuro);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* TESTIMONIOS */
+.testimonials-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  justify-items: stretch; 
+  align-items: stretch;   
+  margin-top: 50px;
+}
+
+.testimonial {
+  background-color: var(--blanco);
+  padding: 45px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;              
+  flex-direction: column;     
+  justify-content: space-between; 
+}
+
+.testimonial:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.testimonial span {
+  display: block;
+  font-weight: 700;
+  color: var(--vino);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.testimonial p {
+  color: var(--gris-oscuro);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* === DOWNLOAD SECTION === */
+.download-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.download-button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: var(--coral);
+  color: var(--blanco);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: var(--vino);
+}
+
+.store-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === ICONOS === */
+.store-icon-apple {
+  width: 160px;     
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.store-icon-apple:hover {
+  transform: scale(1.06);
+}
+
+.store-icon-play {
+  width: 110px;     
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.store-icon-play:hover {
+  transform: scale(1.06);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--vino);
+  color: var(--blanco);
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.1rem;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: var(--blanco);
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  gap: 10px;
+  color: var(--vino);
+}
+
+.logo-img {
+  width: 40px;
+  height: auto;
+}
+
+.header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--gris-oscuro);
+}
+
+.header nav a:hover {
+  color: var(--vino);
+}
+
+/* --- SECCIÓN CONTACTO --- */
+#contacto {
+  padding: 60px 20px;
+  background: var(--gris-claro);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--vino);
+}
+
+.section-subtitle {
+  margin-bottom: 25px;
+  color: var(--gris-oscuro);
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;   
+  gap: 15px;                
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.btn-enviar {
+  background-color: var(--coral);
+  color: var(--blanco);
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: var(--vino);
+}

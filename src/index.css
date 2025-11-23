@@ -1,0 +1,120 @@
+/* Colores oficiales */
+:root {
+  --vino: #B71C1C;
+  --coral: #FF7043;
+  --gris-oscuro: #2E2E2E;
+  --gris-claro: #F5F5F5;
+  --white: #FFFFFF;
+}
+
+/* Estilo global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: var(--gris-claro);
+  color: var(--gris-oscuro);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* Botón coral */
+.button-primary {
+  background-color: var(--coral);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button-primary:hover {
+  background-color: #ff5722; /* coral más oscuro */
+}
+
+/* Contenedor centrado */
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Tarjetas base */
+.card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+/* --- BenefitCard --- */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 1000px) {
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .benefits-grid { grid-template-columns: 1fr; }
+}
+
+.bf-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: 0 8px 24px rgba(46,46,46,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.bf-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(46,46,46,0.08);
+}
+
+.bf-icon {
+  width:56px;
+  height:56px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, var(--coral), #ff9476);
+  color: white;
+  font-size: 24px;
+  flex-shrink:0;
+}
+
+.bf-body { flex:1; }
+
+.bf-title {
+  color: var(--vino);
+  font-size: 1.05rem;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
+
+.bf-desc {
+  margin: 0;
+  color: var(--gris-oscuro);
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
